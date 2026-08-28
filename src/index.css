@@ -1,0 +1,318 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-display: 'Cinzel', 'Playfair Display', serif;
+    --font-cursive: 'Pinyon Script', 'Alex Brush', 'Great Vibes', cursive;
+    --font-luxury: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    --font-garamond: 'Cormorant Garamond', serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #05050A;
+    color: #F3F4F6;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .font-cursive {
+    font-family: var(--font-cursive);
+  }
+
+  .font-luxury {
+    font-family: var(--font-luxury);
+  }
+
+  .font-garamond {
+    font-family: var(--font-garamond);
+  }
+}
+
+/* =========================================================================
+   LUXURY FAINT 3D GLOSSY BLACK EXTRUSION & PERFORATED MESH (Reference Image)
+   ========================================================================= */
+
+/* Dark perforated hex/honeycomb mesh pattern matching the reference image */
+.bg-perforated-mesh {
+  background-color: #0d0f12;
+  background-image: 
+    radial-gradient(circle at center, rgba(30, 35, 45, 0.95) 0%, rgba(10, 11, 15, 0.98) 70%, #050608 100%),
+    radial-gradient(#000000 22%, transparent 26%),
+    radial-gradient(#000000 22%, transparent 26%);
+  background-size: 100% 100%, 14px 14px, 14px 14px;
+  background-position: 0 0, 0 0, 7px 7px;
+}
+
+.bg-perforated-mesh-subtle {
+  background-color: #07080c;
+  background-image: 
+    radial-gradient(ellipse at 50% 30%, rgba(35, 40, 52, 0.6) 0%, rgba(8, 9, 14, 0.95) 80%),
+    radial-gradient(#020305 20%, transparent 24%),
+    radial-gradient(#020305 20%, transparent 24%);
+  background-size: 100% 100%, 12px 12px, 12px 12px;
+  background-position: 0 0, 0 0, 6px 6px;
+}
+
+/* 3D Glossy Extruded Black Text effect exactly mirroring the reference image */
+.text-3d-glossy-black {
+  color: #121418;
+  font-family: 'Impact', 'Syne', 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-shadow:
+    /* Top & inner specular rim highlights (glossy reflection) */
+    0 -1px 1px rgba(255, 255, 255, 0.85),
+    0 -2px 3px rgba(255, 255, 255, 0.4),
+    1px -1px 2px rgba(255, 255, 255, 0.6),
+    -1px -1px 2px rgba(255, 255, 255, 0.6),
+    /* 3D Extrusion bevel layers going downwards & rightwards */
+    0 1px 0 #1b1e24,
+    1px 2px 0 #16181d,
+    2px 3px 0 #121418,
+    3px 5px 0 #0e1013,
+    4px 7px 0 #0b0c0f,
+    5px 9px 0 #08090b,
+    6px 11px 0 #050607,
+    7px 13px 0 #030405,
+    8px 15px 0 #010203,
+    /* Deep Ambient Occlusion Drop Shadows */
+    8px 18px 25px rgba(0, 0, 0, 0.95),
+    12px 24px 45px rgba(0, 0, 0, 0.85),
+    0 0 40px rgba(0, 0, 0, 0.9);
+  position: relative;
+  display: inline-block;
+  transform: perspective(700px) rotateX(10deg);
+}
+
+/* 3D Glossy Extruded Pristine White / Platinum Chrome Text Effect */
+.text-3d-glossy-white {
+  color: #FFFFFF;
+  font-family: 'Syne', 'Montserrat', 'Arial Black', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+  text-shadow:
+    /* Ultra crisp specular rim (0 blur) */
+    0 -1px 0 #FFFFFF,
+    /* 3D Extrusion stepped layers in platinum and deep chrome */
+    0 1px 0 #EDEDED,
+    0 2px 0 #D4D4D8,
+    1px 3px 0 #A1A1AA,
+    1px 4px 0 #71717A,
+    2px 5px 0 #52525B,
+    2px 6px 0 #3F3F46,
+    3px 7px 0 #27272A,
+    3px 8px 0 #18181B,
+    /* Crisp drop shadow */
+    4px 10px 18px rgba(0, 0, 0, 0.95);
+  position: relative;
+  display: inline-block;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* 3D Razor-Sharp Extruded Metallic 24K Gold Text Effect (Crisp & High-Definition) */
+.text-3d-glossy-gold {
+  color: #FFF7B2;
+  font-family: 'Syne', 'Montserrat', 'Arial Black', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+  text-shadow:
+    /* Top specular highlight - razor sharp (0 blur) */
+    0 -1px 0 #FFFFFF,
+    /* 3D Extrusion hard steps (0 blur for ultra crisp edge definition) */
+    0 1px 0 #F5C518,
+    0 2px 0 #D49E00,
+    1px 3px 0 #B27B00,
+    1px 4px 0 #855700,
+    2px 5px 0 #523400,
+    /* Clean crisp drop shadow */
+    2px 6px 12px rgba(0, 0, 0, 0.9);
+  position: relative;
+  display: inline-block;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Glossy highlight line overlay across 3D text */
+.glossy-shine-overlay {
+  position: relative;
+}
+.glossy-shine-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 30%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0.05) 70%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  animation: glossySweep 5s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+@keyframes glossySweep {
+  0% { left: -120%; }
+  35% { left: 160%; }
+  100% { left: 160%; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Luxury Cursive text accentuation */
+.cursive-flourish {
+  font-family: var(--font-cursive);
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Custom glowing and glass styling */
+.glass-panel {
+  background: rgba(13, 14, 22, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  border-color: rgba(0, 240, 255, 0.3);
+  box-shadow: 0 0 25px -5px rgba(0, 240, 255, 0.15);
+}
+
+.neon-border-cyan {
+  border-color: #00F0FF;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+}
+
+.neon-border-magenta {
+  border-color: #FF007F;
+  box-shadow: 0 0 15px rgba(255, 0, 127, 0.35);
+}
+
+.neon-text-cyan {
+  color: #00F0FF;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.6);
+}
+
+.neon-text-magenta {
+  color: #FF007F;
+  text-shadow: 0 0 10px rgba(255, 0, 127, 0.6);
+}
+
+.neon-glow-gold {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+/* Graded Slab Holographic Refractive Sheen */
+.holo-sheen {
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(0, 240, 255, 0.25) 45%,
+    rgba(255, 0, 127, 0.3) 55%,
+    rgba(255, 215, 0, 0.25) 65%,
+    transparent 80%
+  );
+  mix-blend-mode: color-dodge;
+  transition: opacity 0.3s ease;
+}
+
+.slab-perspective {
+  perspective: 1000px;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07080E;
+}
+::-webkit-scrollbar-thumb {
+  background: #1F2232;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00F0FF;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-slideLeft {
+  animation: slideLeft 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scaleUp {
+  animation: scaleUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 12s linear infinite;
+}
+
+

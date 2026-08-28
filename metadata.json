@@ -1,0 +1,6 @@
+{
+  "name": "SlabVault",
+  "description": "A luxury digital vault, portfolio tracker, and architectural VIP Monolith display showcase for high-end graded trading cards (PSA, BGS, CGC slabs).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>SlabVault | Luxury Graded Card Portfolio & Triumph 3D Showroom</title>
+    <meta name="description" content="Museum-grade digital vault, portfolio tracker, and architectural VIP Monolith display showcase for PSA, BGS, and CGC graded cards." />
+    
+    <!-- PWA & Mobile Meta Tags -->
+    <meta name="theme-color" content="#FF7A00" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="SlabVault" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- OpenGraph / Social Media Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SlabVault | Luxury Graded Card Vault & Triumph 3D Showroom" />
+    <meta property="og:description" content="Stop hiding your grails in a spreadsheet. Showcase PSA, BGS, and CGC slabs with real-time 3D lighting, historical comps, and the Triumph VIP Monolith." />
+    <meta property="og:image" content="/assets/og-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SlabVault | Digital Graded Card Vault" />
+    <meta name="twitter:description" content="Museum-grade digital vault and 3D architectural showcase for elite card collectors." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Great+Vibes&family=JetBrains+Mono:wght@400;500;600;700&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700;1,900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#05050A] text-[#F3F4F6] font-sans antialiased selection:bg-[#FF7A00]/30 selection:text-white min-h-screen overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch((err) => {
+            console.log('ServiceWorker registration skipped or failed:', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
+
